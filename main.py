@@ -1,16 +1,3 @@
-class Bank:
-    def __init__(self):
-        self.customers = {}  # Dictionary of Customer objects
-
-    def create_customer(self, name, customer_id):
-        """Creates a new customer and adds to the bank."""
-        pass
-
-    def close_account(self, account_number):
-        """Closes an account and stores its details."""
-        pass
-
-
 class Customer:
     def __init__(self, name, customer_id):
         self.name = name
