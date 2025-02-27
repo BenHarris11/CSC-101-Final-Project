@@ -6,7 +6,7 @@ class Customer:
 
     def create_account(self, account_number, account_type):
         """Creates a new bank account for the customer."""
-        pass
+
 
 
 class Account:
@@ -15,17 +15,7 @@ class Account:
         self.account_type = account_type  # e.g., "Checking", "Savings"
         self.balance = balance
 
-    def deposit(self, amount):
-        """Deposits money into the account."""
-        pass
 
-    def withdraw(self, amount):
-        """Withdraws money if sufficient balance is available."""
-        pass
-
-    def transfer(self, target_account, amount):
-        """Transfers money to another account."""
-        pass
 
 
 class Transaction:
@@ -37,7 +27,17 @@ class Transaction:
 
     def process_transaction(self):
         """Processes the transaction and updates accounts."""
-        pass
+
+    def deposit(self, amount):
+        """Deposits money into the account."""
+
+
+    def withdraw(self, amount):
+        """Withdraws money if sufficient balance is available."""
+
+
+    def transfer(self, target_account, amount):
+        """Transfers money to another account."""
 
 
 class Receipt:
@@ -46,4 +46,4 @@ class Receipt:
 
     def generate_receipt(self):
         """Generates a transaction receipt."""
-        pass
+
