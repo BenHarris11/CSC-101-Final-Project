@@ -5,7 +5,7 @@ class Transaction:
         self.account_number = account_number
         self.target_account = target_account
 
-def deposit(self, account, amount):
+    def deposit(self, account, amount):
         """Deposits money into the account."""
         account.balance += amount
         print(f"Deposited ${amount} into account {account.account_number}. New balance: ${account.balance}")
