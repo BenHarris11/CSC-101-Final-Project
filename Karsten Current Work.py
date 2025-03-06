@@ -33,5 +33,3 @@ def close_account(customer_id: int, account_number: int):
         account_list.remove(target)
     else:
         print("Account Not Found")
-
-
