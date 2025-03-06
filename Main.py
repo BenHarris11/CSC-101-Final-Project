@@ -3,6 +3,18 @@ from Customer import Customer
 from Transactions import Transaction
 
 def main():
+    """
+    The main function for the banking system.
+
+    This function provides a command-line interface for users to interact with the bank system.
+    Users can log in to their accounts, perform transactions (deposit, withdraw, check balance), and log out.
+
+    Arguments:
+        None
+
+    Returns:
+        None
+    """
     customers = {}
     while True:
         print("\nWelcome to the Bank System")
