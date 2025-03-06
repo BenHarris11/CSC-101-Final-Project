@@ -5,11 +5,19 @@ class Transaction:
         self.account_number = account_number
         self.target_account = target_account
 
-    def deposit(self, account, amount):
+    # Allows user to deposit money into their chosen account
+    # input: A customer id and account number to specify which account is getting the money
+    # input: An amount to be deposited
+    # output: None, just prints a confirmation message
+    def deposit(self, account, amount)-> None:
         """Deposits money into the account."""
         account.balance += amount
         print(f"Deposited ${amount} into account {account.account_number}. New balance: ${account.balance}")
 
+    # Allows user to withdraw money from their chosen account
+    # input: A customer id and account number to specify which account is being withdrawn from
+    # input: An amount to be withdrawn
+    # output: None, just prints a confirmation message or an error message if the amount is invalid
     def withdraw(self, account, amount):
         """Withdraws money if sufficient balance is available."""
         if amount <= account.balance:
@@ -18,6 +26,11 @@ class Transaction:
         else:
             print("Insufficient funds.")
 
+    # Allows user to transfer money between their own accounts or between their account and
+    # another customer's account
+    # input: customer id and account number of account sending the money
+    # input: customer id and account number of account receiving the money
+    # output: None, just prints a confirmation message or error message if ther is one.
     def transfer(self, from_account, to_account, amount):
         """Transfers money to another account."""
         if amount <= from_account.balance:
