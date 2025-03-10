@@ -2,12 +2,11 @@ from Accounts import Account, create_account, account_list
 from Customer import Customer, customer_list
 from transactions_module import deposit, withdraw
 
-
+#Author: Ben Harris
 def main():
-    """
-    The main function for the banking system.
-    Users can create an account, log in, perform transactions, and log out.
-    """
+    #The main function for the banking system.
+    #Users can create an account, log in, perform transactions, and log out.
+
     while True:
         print("\nWelcome to the Bank System")
         print("1. Create Account")
