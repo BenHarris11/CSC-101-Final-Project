@@ -1,18 +1,9 @@
-from Transactions import Transaction
+def generate_receipt(t) -> None:
+    from transactions_module import Transaction  # ✅ Import inside function
 
-#Author: Ben Harris
-class Receipt:
-    def __init__(self, transaction: Transaction):
-        self.transaction = transaction
-    def __repr__(self)-> str:
-        return ('Receipt: '
-                '(Transaction: {})'.format(self.transaction))
+    if not isinstance(t, Transaction):
+        raise TypeError("Expected a Transaction object")
 
-#Author: Karsten Sarmiento
-# Creates a receipt based on the current transaction by the customer on the account
-# input: a Transaction Object
-# Output: All information associated with transaction by customer
-def generate_receipt(t: Transaction)-> None:
     if t.transaction_type == "Deposit":
         print("Transaction Receipt:")
         print("{}, You just made a deposit into your {} account."
