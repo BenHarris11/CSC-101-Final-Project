@@ -2,7 +2,7 @@ import unittest
 from Accounts import create_account, close_account, account_list
 
 
-class TestATMFunctions(unittest.TestCase):
+class TestFunctions(unittest.TestCase):
 
     def test_create_account(self):
         create_account(54321, 98765477, "Savings", 1000.0)
