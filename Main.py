@@ -1,8 +1,8 @@
 from Accounts import Account, create_account, account_list
 from Customer import Customer, customer_list
-from transactions_module import deposit, withdraw
+from transactions_module import deposit, withdraw, local_transfer, cust_to_cust_transfer
 
-#Author: Ben Harris
+
 def main():
     #The main function for the banking system.
     #Users can create an account, log in, perform transactions, and log out.
@@ -35,7 +35,8 @@ def main():
             if account and customer:
                 print(f"Welcome, {customer.name}!")
                 while True:
-                    print("\n1. Deposit\n2. Withdraw\n3. Check Balance\n4. Logout")
+                    print(
+                        "\n1. Deposit\n2. Withdraw\n3. Check Balance\n4. Transfer (Own Accounts)\n5. Transfer (To Another Customer)\n6. Logout")
                     action = input("Choose an option: ")
 
                     if action == "1":
@@ -45,6 +46,10 @@ def main():
                     elif action == "3":
                         print("Current Balance: $", account.balance)
                     elif action == "4":
+                        local_transfer(customer)
+                    elif action == "5":
+                        cust_to_cust_transfer(customer)
+                    elif action == "6":
                         print("Logging out...")
                         break
                     else:
